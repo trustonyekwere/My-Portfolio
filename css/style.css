@@ -79,7 +79,7 @@ section {
     display: flex;
     align-items: center;
     padding: 0 9%;
-    background: url('/img/wp7453794-portfolio-wallpapers.jpg') no-repeat;
+    /* background: url('/img/wp7453794-portfolio-wallpapers.jpg') no-repeat; */
     background-size: cover;
     background-position: center;
 }
