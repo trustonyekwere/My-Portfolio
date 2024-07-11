@@ -79,7 +79,7 @@ section {
     display: flex;
     align-items: center;
     padding: 0 9%;
-    /* background: url('/img/wp7453794-portfolio-wallpapers.jpg') no-repeat; */
+    background: url('/img/') no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -215,4 +215,19 @@ section {
 
 .home-sci a:hover::before {
     width: 100%;
+}
+
+.home-imgHover{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45%;
+    height: 100%;
+    background: transparent;
+    border: 2px solid red;
+    transition: 3s;
+}
+
+.home-imgHover:hover{
+    background: yellowgreen;
 }
