@@ -182,7 +182,7 @@ section {
 
 .btn-box .btn:nth-child(2):hover {
     color: var(--bg-color);
-    border: .1rem solid var(--bg-color);
+    border: 2px solid var(--bg-color);
 }
 
 .btn-box .btn::before {
