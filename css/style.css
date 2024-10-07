@@ -74,6 +74,16 @@ body {
     color: #000;
 }
 
+.modal-content-img{
+    position: relative;
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .modal-footer a i{
     font-size: 25px;
     color: #000;
@@ -95,12 +105,9 @@ section {
 }
 
 .profile{
-    width: 300px;
-    left: 0;
-    align-items: center;
-    margin-top: 30px;
-    border: #00ffff 2px solid;
-    border-radius: 30px;
+    border: #00ffff 3px solid;
+    width: 90%;
+    border-radius: 50%;
 }
 
 .home {
