@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
-    <link rel="shortcut icon" href="/img/icons8-portfolio-16.png" type="image/x-icon">
-    <link rel="stylesheet" href="/materialize.css">
+    <link rel="shortcut icon" href="/img/employee.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/modal.css">
     <!-- external styling -->
      <link rel="stylesheet" href="css/style.css">
     <!-- Material icons -->
@@ -20,40 +20,98 @@
 
         <nav class="navbar">
             <a href="#home" class="active">Home</a>
-            <a href="#about">About</a>
-            <a href="#education">Education</a>
-            <a href="#skills">Skills</a>
-            <a href="#contact">Contact</a>
+            <a class="modal-trigger" href="#modal1">About</a>
+            <a class="modal-trigger" href="#modal2">Skills</a>
+            <a href="tel:+2348108212511">Contact</a>
         </nav>
     </header>
     
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <div class="row">
+        <div class="col xl-6 l6 s12 m6">
+            <img class="profile" src="img/WhatsApp Image 2024-10-07 at 18.21.56_a6d2411b.jpg" alt="profile">
+        </div>
+        <div class="col xl-6 l6 s12 m6">
+            <h3 style="border-bottom: #00ffff 2px solid;padding-bottom: 5px;"><b>About me</b></h3>
+            <br>
+            <p>Hi, I’m Trust Onyekwere, a passionate and innovative Frontend Developer with a passion for creating visually stunning and highly functional web applications. With a strong foundation in HTML, CSS, and JavaScript, I specialize in building responsive, user-friendly interfaces that provide seamless user experiences across all devices.</p> 
+            <br>
+            <p>Over the years, I’ve honed my skills in various frontend frameworks and libraries, including Materialize, Bootstrap, and React. Whether it’s collaborating with cross-functional teams or working independently, I always strive for excellence and aim to deliver high-qualitycode that meets both client and user needs.</p>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class="modal-close waves-effect waves-green btn-flat"><i class="fa fa-window-close"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Structure -->
+  <div id="modal2" class="modal">
+    <div class="modal-content">
+      <div class="row">
+        <div class="col xl-6 l6 s12 m6">
+            
+        </div>
+        <div class="col xl-6 l6 s12 m6">
+
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class="modal-close waves-effect waves-green btn-flat"><i class="fa fa-window-close"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <div class="row">
+        <div class="col xl-6 l6 s12 m6">a passionate and innovative Frontend Developer with a passion for creating visually stunning and highly functional web applications. With a strong foundation in HTML, CSS, and JavaScript, I specialize in building responsive, user-frien
+            <img class="profile" src="img/WhatsApp Image 2024-10-07 at 18.21.56_a6d2411b.jpg" alt="profile">
+        </div>
+        <div class="col xl-6 l6 s12 m6">
+            <h3 style="border-bottom: #00ffff 2px solid;padding-bottom: 5px;"><b>About me</b></h3>
+            <br>
+            <p>Hi, I’m Trust Onyekwere, a passionate and innovative Frontend Developer with a passion for creating visually stunning and highly functional web applications. With a strong foundation in HTML, CSS, and JavaScript, I specialize in building responsive, user-friendly interfaces that provide seamless user experiences across all devices.</p> 
+            <br>
+            <p>Over the years, I’ve honed my skills in various frontend frameworks and libraries, including Materialize, Bootstrap, and React. Whether it’s collaborating with cross-functional teams or working independently, I always strive for excellence and aim to deliver high-qualitycode that meets both client and user needs.</p>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class="modal-close waves-effect waves-green btn-flat"><i class="fa fa-window-close"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
 <!-- home section deign -->
     <section class="home" id="home">
         <div class="home-content">
-            <h1>Hi, I'm <span>Trust Onyekwere</span></h1>
+            <h1>Hi, I'm <span>Trust Onyekwere.</span></h1>
             <div class="text-animate">
                 <h3>Frontend Developer</h3>
             </div>
             <p>Welcome to my portfolio. I'm a passionate frontend developer dedicated to crafting beautiful and functional websites that elevate your brand and captivate your audience. Explore my work and discover how I can bring your vision to life.</p>
 
             <div class="btn-box">
-                <a href="#" class="btn">Hire Me</a>
-                <a href="#" class="btn">Let's Talk</a>
+                <a href="mailto:trustonyekwere151@gmail.com" class="btn">Hire Me</a>
+                <a href="tel:+2348108212511" class="btn">Let's Talk</a>
             </div>
         </div>
 
         <div class="home-sci">
-            <a href="#"><i class="fa-brands fa-facebook"></i></a>
-            <a href="#"><i class="fa-brands fa-github"></i></a>
-            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://web.facebook.com/nova.artz.00"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://github.com/trustonyekwere"><i class="fa-brands fa-github"></i></a>
+            <a href="tel:+2348108212511"><i class="fa-brands fa-whatsapp"></i></a>
         </div>
 
         <div class="home-imgHover"></div>
 
     </section>
 
-    <script src="/jqueryv3.4.1.js"></script>
-    <script src="/materialize.min.js"></script>
+    <script src="js/jqueryv3.4.1.js"></script>
+    <script src="js/materialize.min.js"></script>
     <script>
         $(document).ready(function(){
             $('.slider').slider({
@@ -61,6 +119,9 @@
                 duration:5000,
             });
         });
+        $(document).ready(function(){
+            $('.modal').modal();
+            });
     </script>
 </body>
 </html>
