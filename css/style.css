@@ -268,4 +268,22 @@ section {
     .header{
         padding: 2rem 4%;
     }
+
+    section{
+        padding: 10rem 4% 2rem;
+    }
+
+    .home{
+        padding: 0 4%;
+    }
+
+    .footer{
+        padding: 2rem 4%;
+    }
+}
+
+@media (max-width: 768px) {
+    html{
+        font-size: 45%;
+    }
 }
