@@ -255,23 +255,24 @@ section {
 
 
 /* responsive */
-/* @media (max-width: 1200px) {
+@media (max-width: 1200px) {
     html{
         font-size: 55%;
     }
 }
 
 @media(max-width: 991px) {
-    .header{
-        padding: 2rem 4%;
-    }
+    /* .header{
+        padding: 10px 0px 0px 0px;
+        margin: -3.895rem 4%;
+    } */
 
     section{
         padding: 10rem 4% 2rem;
     }
 
     .home{
-        padding: 0 4%;
+        padding-top: 240px;
     }
 
     .footer{
@@ -283,4 +284,4 @@ section {
     html{
         font-size: 45%;
     }
-} */
+}
