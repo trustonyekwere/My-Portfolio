@@ -5,27 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>trust-onyekwere</title>
     <link rel="shortcut icon" href="/img/employee.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/materialize.css">
     <!-- external styling -->
      <link rel="stylesheet" href="css/style.css">
-    <!-- Material icons -->
+    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://kit.fontawesome.com/fbafc4697c.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- header design -->
     <header class="header">
-        <a href="#" class="logo">Trust.</a>
+        <a href="#" class="logo hide-on-med-and-down">Trust.</a>
 
-        <div id="menu-icon"><i class="material-icons">menu</i></div>
+      <nav class="nav-wrapper" id="nav">
+        <div class="container">
+          <a href="#" class="logo right hide-on-large-only">Trust.</a>
+          <a href="" class="sidenav-trigger" data-target="mobile-links">
+            <i class="material-icons">menu</i>
+          </a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a class="modal-trigger" href="#modal1">About</a></li>
+            <li><a class="modal-trigger" href="#modal2">Skills</a></li>
+            <li><a href="https://wa.me/+2348108212511">Contact</a></li>
+          </ul>
+        </div>
 
-        <nav class="navbar">
-            <a href="#home" class="active">Home</a>
-            <a class="modal-trigger" href="#modal1">About</a>
-            <a class="modal-trigger" href="#modal2">Skills</a>
-            <a href="https://wa.me/+2348108212511">Contact</a>
-        </nav>
+      </nav>
 
-
+      <ul class="sidenav hide-on-large-only" id="mobile-links">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a class="modal-trigger" href="#modal1">About</a></li>
+        <li><a class="modal-trigger" href="#modal2">Skills</a></li>
+        <li><a href="https://wa.me/+2348108212511">Contact</a></li>
+      </ul>
+        
 
     </header>
     
@@ -41,7 +55,7 @@
             <br>
             <p>Hi, I’m Trust Onyekwere, a passionate and innovative Frontend Developer with a passion for creating visually stunning and highly functional web applications. With a strong foundation in HTML, CSS, and JavaScript, I specialize in building responsive, user-friendly interfaces that provide seamless user experiences across all devices.</p> 
             <br>
-            <p>Over the years, I’ve honed my skills in various frontend frameworks and libraries, including Materialize, Bootstrap, and React. Whether it’s collaborating with cross-functional teams or working independently, I always strive for excellence and aim to deliver high-qualitycode that meets both client and user needs.</p>
+            <p>Whether it’s collaborating with cross-functional teams or working independently, I always strive for excellence and aim to deliver high-qualitycode that meets both client and user needs.</p>
         </div>
         <div class="modal-footer">
           <a href="#!" class="modal-close waves-effect waves-green btn-flat"><i class="fa fa-window-close"></i></a>
@@ -77,7 +91,7 @@
             <p>Welcome to my portfolio. I'm a passionate frontend developer dedicated to crafting beautiful and functional websites that elevate your brand and captivate your audience. Explore my work and discover how I can bring your vision to life.</p>
 
             <div class="btn-box">
-                <a href="mailto:trustonyekwere151@gmail.com" class="btn">Hire Me</a>
+                <a href="https://www.linkedin.com/in/onyekwere-trust-5989412b7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="btn">Hire Me</a>
                 <a href="https://wa.me/+2348108212511" class="btn">Let's Talk</a>
             </div>
         </div>
