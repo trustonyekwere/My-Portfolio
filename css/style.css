@@ -33,6 +33,7 @@ body {
 
 .header {
     width: 100%;  
+    height: 100%;
     margin: 0px 0px -70px 2px;
     display: flex;
     justify-content: space-between;
@@ -41,10 +42,10 @@ body {
 }
 
 .logo {
-    font-size: 2.5rem;
+    font-size: 3rem;
     color: var(--bg-color);
     font-weight: 600;
-    margin-left: 120px;
+    padding-left: 125px;
 }
 
 .nav-wrapper a.active {
@@ -83,18 +84,19 @@ body {
 }
 
 .modal-content p{
-    line-height: 18px;
+    line-height: 18.8px;
     font-size: 14px;
 }
 
-section {
+section.home {
     min-height: 100vh;
     padding: 10rem 9% 2rem;
 }
 
 .profile{
     border: #00ffff 3px solid;
-    width: 90%;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
 }
 
@@ -104,7 +106,7 @@ section {
     background-size: cover;
     background-position: center;
     width: 1380px;
-    /* height: 685px; */
+    height: 100.9vh;
     /* padding-top: 180px; */
 }
 
@@ -118,6 +120,7 @@ section {
 
 .home-content {
     max-width: 60rem;
+    margin-top: 100px;
 }
 
 .home-content h1 {
@@ -251,37 +254,3 @@ section {
 .home-sci a:hover::before {
     width: 100%;
 }
-
-
-
-/* responsive */
-@media (max-width: 1200px) {
-    /* html{
-        font-size: 55%;
-    }
-}
-
-@media(max-width: 991px) {
-    /* .header{
-        padding: 10px 0px 0px 0px;
-        margin: -3.895rem 4%;
-    } */
-
-    section{
-        padding: 10rem 4% 2rem;
-    }
-
-    .home{
-        padding-top: 240px;
-    }
-
-    .footer{
-        padding: 2rem 4%;
-    }
-}
-
-@media (max-width: 768px) {
-    html{
-        font-size: 45%;
-    }
-} */
