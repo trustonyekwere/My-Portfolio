@@ -46,6 +46,7 @@ body {
     color: var(--bg-color);
     font-weight: 600;
     padding-left: 125px;
+    padding-top: 14px !important;
 }
 
 .nav-wrapper a.active {

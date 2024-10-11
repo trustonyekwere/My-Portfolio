@@ -4422,8 +4422,7 @@ nav ul a.btn > .material-icons, nav ul a.btn-large > .material-icons, nav ul a.b
 }
 
 nav ul a:hover {
-  background-color: rgba(0, 0, 0, 0.1);
-  color: #00ffff !important;
+  color: #00ffff;
 }
 
 nav ul.left {
