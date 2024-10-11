@@ -256,7 +256,7 @@ section {
 
 /* responsive */
 @media (max-width: 1200px) {
-    html{
+    /* html{
         font-size: 55%;
     }
 }
@@ -284,4 +284,4 @@ section {
     html{
         font-size: 45%;
     }
-}
+} */
