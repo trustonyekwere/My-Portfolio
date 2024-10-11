@@ -104,8 +104,8 @@ section {
     background-size: cover;
     background-position: center;
     width: 1380px;
-    height: 685px;
-    padding-top: 180px;
+    /* height: 685px; */
+    /* padding-top: 180px; */
 }
 
 #nav{
