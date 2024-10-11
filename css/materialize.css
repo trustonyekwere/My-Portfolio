@@ -4271,10 +4271,11 @@ table span.badge {
 
 nav {
   color: #fff;
-  background-color: #ee6e73;
+  background-color: transparent;
   width: 100%;
   height: 56px;
   line-height: 56px;
+  z-index: 0;
 }
 
 nav.nav-extended {
@@ -4293,6 +4294,10 @@ nav.nav-extended .nav-content {
 
 nav a {
   color: #fff;
+  font-size: 1.7rem !important;
+  color: var(--bg-color);
+  font-weight: 500;
+  margin-left: 3.5rem;
 }
 
 nav i,
@@ -4305,7 +4310,7 @@ nav i.material-icons {
 }
 
 nav .nav-wrapper {
-  position: relative;
+  position: fixed;
   height: 100%;
 }
 
@@ -4391,9 +4396,9 @@ nav ul li {
   padding: 0;
 }
 
-nav ul li.active {
-  background-color: rgba(0, 0, 0, 0.1);
-}
+/* nav ul li.active {
+  color: #00ffff;
+} */
 
 nav ul a {
   -webkit-transition: background-color .3s;
@@ -4418,6 +4423,7 @@ nav ul a.btn > .material-icons, nav ul a.btn-large > .material-icons, nav ul a.b
 
 nav ul a:hover {
   background-color: rgba(0, 0, 0, 0.1);
+  color: #00ffff !important;
 }
 
 nav ul.left {
@@ -4457,9 +4463,9 @@ nav .input-field label i {
   transition: color .3s;
 }
 
-nav .input-field label.active i {
-  color: #fff;
-}
+/* nav .input-field label.active i {
+  color: #00ffff;
+} */
 
 .navbar-fixed {
   position: relative;
@@ -5043,7 +5049,7 @@ small {
 
 .tabs.tabs-transparent .tab a:hover,
 .tabs.tabs-transparent .tab a.active {
-  color: #fff;
+  color: #00ffff;
 }
 
 .tabs.tabs-transparent .indicator {
@@ -5094,7 +5100,7 @@ small {
 
 .tabs .tab a:hover, .tabs .tab a.active {
   background-color: transparent;
-  color: #ee6e73;
+  color: #00ffff;
 }
 
 .tabs .tab.disabled a,
