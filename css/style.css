@@ -336,3 +336,31 @@ section.home {
 .home-sci a:hover::before {
     width: 100%;
 }
+
+.maintenance-ongoing{
+    text-align: center;
+    font: 20px Helvetica, sans-serif;
+    color: #fff; 
+    background-color: #000;
+}
+
+.maintenance-ongoing h1{
+    font-size: 50px; 
+}
+
+.maintenance-ongoing article{
+    display: block;
+    text-align: left;
+    width: 650px;
+    margin: 0 auto;
+}
+
+.maintenance-ongoing a{
+    color: #00ffff;
+    text-decoration: none;
+}
+
+.maintenance-ongoing a:hover{
+    color: #333;
+    text-decoration: none;
+}
