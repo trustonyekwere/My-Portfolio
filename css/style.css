@@ -103,7 +103,7 @@ body {
     font-size: 14px;
 }
 
-.mobile-modal-content{
+/* .mobile-modal-content{
     color: #000;
     align-items: center !important;
     justify-content: space-between;
@@ -133,7 +133,7 @@ body {
 .mobile-modal-content p{
     line-height: 18.8px;
     font-size: 14px;
-}
+} */
 
 section.home {
     min-height: 100vh;
@@ -146,13 +146,13 @@ section.home {
     height: 270px;
     border-radius: 50%;
 }
-
+/* 
 .mobile-profile{
     border: #00ffff 3px solid;
     width: 270px;
     height: 270px;
     border-radius: 50%;
-}
+} */
 
 .home {
     display: flex;
@@ -199,7 +199,7 @@ section.home {
     font-size: 1.6rem;
     margin: 2rem 0 4rem;
 }
-
+/* 
 .mobile-home-content {
     margin-top: 100px;
 }
@@ -209,7 +209,7 @@ section.home {
     font-weight: 800;
     line-height: 1.1;
     /* width: 40rem; */
-}
+/* }
 
 .mobile-home-content .text-animate {
     position: relative;
@@ -226,7 +226,7 @@ section.home {
 .mobile-home-content p {
     font-size: 1.5rem;
     margin: 2rem 0 4rem;
-}
+} */ 
 
 .btn-box {
     position: relative;
