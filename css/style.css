@@ -339,7 +339,11 @@ section.home {
 
 .maintenance-ongoing{
     text-align: center;
+    justify-items: center;
+    align-items: center;
     font: 20px Helvetica, sans-serif;
+    padding-bottom: 580px;
+    padding-top: 40px;
     color: #fff; 
     background-color: #000;
 }
