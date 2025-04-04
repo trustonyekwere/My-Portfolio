@@ -1,0 +1,107 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Allerta stencil', sans-serif;;
+}
+
+html {
+    background-color: #222;
+    color: #fff !important;
+}
+
+nav {
+    background-color: #222 !important;
+}
+
+.btn {
+    text-transform: capitalize !important;
+    background-color: #222 !important;
+    border: 2px #32CD32 solid !important;
+    border-radius: 18px !important;
+    padding-left: 25px !important;
+    padding-right: 25px !important;
+}
+
+.btn:hover {
+    background-color: #32CD32 !important;
+}
+
+.un {
+    text-decoration: underline;
+    text-decoration-color: #32CD32;
+}
+
+.br {
+    margin-top: 20%;
+}
+
+.card {
+    background-color: #333 !important;
+}
+
+.col {
+    padding: 0px 10px 0px 0px !important;
+}
+
+/* Headings */
+.section-header h3 {
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.section-header h5 {
+    font-weight: 400;
+    margin-top: 5px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Underline effect for Skill-Set */
+.section-header h5::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background-color: #32CD32; /* Materialize red */
+}
+
+/* Card styling to match screenshot */
+.service-card {
+    background-color: #2a2a2a;
+    padding: 30px 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    height: 100%;
+}
+
+.service-card a {
+    color: #32CD32;
+}
+
+.service-card i {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.service-card h6 {
+    font-size: 18px;
+    margin: 15px 0 10px;
+    color: #32CD32;
+}
+
+.service-card h5 {
+    margin: 15px 0 10px;
+    color: #32CD32;
+}
+.service-card p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.green-text1 {
+    color: #32CD32 !important;
+}
