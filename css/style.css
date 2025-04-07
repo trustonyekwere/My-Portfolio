@@ -83,7 +83,7 @@ nav {
 }
 
 .service-card i {
-    font-size: 48px;
+    font-size: 45px;
     margin-bottom: 10px;
 }
 
@@ -100,6 +100,7 @@ nav {
 .service-card p {
     font-size: 14px;
     line-height: 1.5;
+    text-align: start;
 }
 
 .green-text1 {
