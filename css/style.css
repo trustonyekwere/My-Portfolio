@@ -135,16 +135,31 @@ nav {
     border: 2px #222 solid;
 }
 
-.carousel {
-    background: transparent;
+/* Carousel wrapper */
+.infinite-carousel {
+    position: relative;
     max-width: 900px;
-    margin: auto;
+    margin: 2rem auto;      /* adjust vertical spacing via CSS, not <br> */
+    overflow: hidden;
 }
-.carousel-cell {
-    width: 200px;
+
+  /* Track container hides overflow */
+.carousel-track-container {
+    overflow: hidden;
+}
+
+  /* Flex‑row of all items */
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+  /* Individual cards */
+.carousel-item {
+    flex: 0 0 200px;       /* fixed width for smooth looping */
     margin-right: 20px;
-    background: #fff;
-    color: #333;
+    background: #333;
+    color: #fff;
     border-radius: 8px;
     padding: 1.5rem;
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
@@ -153,29 +168,41 @@ nav {
     flex-direction: column;
     align-items: center;
 }
-.carousel-cell i {
-    font-size: 2.5rem;
-    color: #f0a500;
-    margin-bottom: 0.5rem;
+
+  /* Buttons */
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #31cb31;
+    border: none;
+    color: #fff;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
 }
+.carousel-button.prev { left: 10px; }
+.carousel-button.next { right: 10px; }
+
+  /* Lordicon cleanup */
+.lico {
+    will-change: transform;
+    backface-visibility: hidden;
+    overflow: hidden;
+    display: block;
+}
+
+  /* Stats text */
 .stats-number {
-    font-size: 2rem;
+    font-size: 1.75rem;
     font-weight: bold;
-    margin-bottom: 0.25rem;
+    margin: 0.5rem 0 0.25rem;
 }
 .stats-label {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-}
-/* Flickity overrides */
-.flickity-button {
-    background: #f0a500;
-    opacity: 0.75;
-}
-.flickity-button:hover {
-    opacity: 1;
-}
-.flickity-button:disabled {
-    opacity: 0.3;
+    color: #fff;
 }
