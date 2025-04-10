@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>trust_onyekwere</title>
-
+        
     <!-- favicon -->
     <link rel="shortcut icon" href="img/dev.png" type="image/x-icon">
 
+    <!-- Flickity CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css"/>
+        
     <!-- styling -->
     <link rel="stylesheet" href="css/style.css">
 
@@ -28,6 +31,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap" rel="stylesheet">
+
 
 </head>
 
@@ -104,6 +108,66 @@
 
                 <!-- content  -->
                 <p>Typically I am a creature of routine, you could say predictable. Wanna get an understanding to a week in my life, here are some stats.</p><br><br>
+
+                <div class="carousel">
+                    <div class="carousel-cell">
+                            <lord-icon
+                                src="https://cdn.lordicon.com/wsaaegar.json"
+                                trigger="loop"
+                                delay="2000"
+                                colors="primary:#32cd32,secondary:#32cd32"
+                                style="width:65px;height:65px">
+                            </lord-icon>
+                        <div class="stats-number">96</div>
+                        <div class="stats-label">Flat Whites</div>
+                    </div>
+                    <div class="carousel-cell">
+                            <lord-icon
+                                src="https://cdn.lordicon.com/wsaaegar.json"
+                                trigger="loop"
+                                delay="2000"
+                                colors="primary:#32cd32,secondary:#32cd32"
+                                style="width:65px;height:65px">
+                            </lord-icon>
+                        <div class="stats-number">329</div>
+                        <div class="stats-label">Songs Listened To</div>
+                    </div>
+                    <div class="carousel-cell">
+                            <lord-icon
+                                src="https://cdn.lordicon.com/wsaaegar.json"
+                                trigger="loop"
+                                delay="2000"
+                                colors="primary:#32cd32,secondary:#32cd32"
+                                style="width:65px;height:65px">
+                            </lord-icon>
+                        <div class="stats-number">05</div>
+                        <div class="stats-label">Skipped Meals</div>
+                    </div>
+                    <div class="carousel-cell">
+                            <lord-icon
+                                src="https://cdn.lordicon.com/wsaaegar.json"
+                                trigger="loop"
+                                delay="2000"
+                                colors="primary:#32cd32,secondary:#32cd32"
+                                style="width:65px;height:65px">
+                            </lord-icon>
+                        <div class="stats-number">16</div>
+                        <div class="stats-label">Hours Gaming</div>
+                    </div>
+                    <div class="carousel-cell">
+                            <lord-icon
+                                src="https://cdn.lordicon.com/wsaaegar.json"
+                                trigger="loop"
+                                delay="2000"
+                                colors="primary:#32cd32,secondary:#32cd32"
+                                style="width:65px;height:65px">
+                            </lord-icon>
+                        <div class="stats-number">32</div>
+                        <div class="stats-label">Kilometers Walked</div>
+                    </div>
+                    <!-- duplicate your cells if you want more variety… Flickity will clone them under the hood -->
+                </div><br>
+                
 
                 <!-- Service Cards Grid -->
                 <div class="row">
@@ -452,6 +516,22 @@
             M.ScrollSpy.init(scrollspyElems, {
             scrollOffset: 50 // tweak as needed
             });
+        });
+    </script>
+
+    <!-- Flickity JS -->
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script>
+        var flkty = new Flickity( '.carousel', {
+        cellAlign: 'left',
+        contain: true,
+        wrapAround: true,        // ← true infinite loop
+        autoPlay: 3000,          // ← 3s between slides
+        pauseAutoPlayOnHover: false,
+        prevNextButtons: false,
+        pageDots: false,
+        groupCells: false,
+        draggable: true,
         });
     </script>
 </body>
