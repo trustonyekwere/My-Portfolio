@@ -121,3 +121,17 @@ nav {
     color: white !important; 
 }
 
+.btn-primary {
+    background-color: #32CD32 !important;
+}
+
+.btn-primary:hover {
+    background-color: #222 !important;
+    border: 2px #32CD32 solid;
+}
+
+.btn-secondary:hover {
+    background-color: #32CD32;
+    border: 2px #222 solid;
+}
+
