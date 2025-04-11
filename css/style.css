@@ -50,26 +50,6 @@ nav {
     margin-bottom: 0;
 }
 
-.section-header h5 {
-    font-weight: 400;
-    margin-top: 5px;
-    position: relative;
-    display: inline-block;
-    padding-bottom: 5px;
-}
-
-/* Underline effect for Skill-Set */
-.section-header h5::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 2px;
-    background-color: #32CD32; /* Materialize red */
-}
-
 /* Card styling to match screenshot */
 .service-card {
     background-color: #2a2a2a;
@@ -196,8 +176,7 @@ nav {
 
   /* Stats text */
 .stats-number {
-    font-size: 1.75rem;
-    font-weight: bold;
+    font-size: 1.25rem;
     margin: 0.5rem 0 0.25rem;
 }
 .stats-label {
