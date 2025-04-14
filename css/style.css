@@ -2,12 +2,37 @@
     margin: 0px;
     padding: 0px;
     font-family: 'Allerta stencil', sans-serif;;
+    scroll-behavior: smooth !important;
 }
 
 html {
     background-color: #222;
     color: #fff !important;
-    scroll-behavior: smooth;
+    scroll-behavior: smooth !important;
+    scroll-padding-top: 80px; /* match your data-bs-offset */
+    overflow-x: hidden;
+}
+
+.scrollspy {
+    position: relative;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.carousel-wrapper {
+    max-width: 100vw;
+    overflow: hidden;
+}
+
+.carousel-track-container {
+    overflow: hidden;
+    min-height: 160px; /* adjust as needed */
+}
+
+section {
+    scroll-margin-top: 80px; /* adjust to match your navbar height */
 }
 
 nav {
@@ -184,4 +209,24 @@ nav {
     text-transform: uppercase;
     letter-spacing: 0.5px;
     color: #fff;
+}
+
+.learn-more {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+}
+
+/* .learn-more:hover {
+    color: #31cb31;
+    transition: 0.2s ease-in-out;
+} */
+
+.learn-more  i {
+    color: #31cb31 !important;
+    padding-top: 10%;
+}
+
+.straight {
+    text-align: justify;
 }
