@@ -6,8 +6,8 @@
 }
 
 html {
-    background-color: #222;
-    color: #fff !important;
+    background-color: #1A1A1A;
+    color: 	#F8F9FA !important;
     scroll-behavior: smooth !important;
     scroll-padding-top: 80px; /* match your data-bs-offset */
     overflow-x: hidden;
@@ -47,19 +47,19 @@ nav {
 .btn {
     text-transform: capitalize !important;
     background-color: #222 !important;
-    border: 2px #32CD32 solid !important;
+    border: 2px #2FAFC0 solid !important;
     border-radius: 18px !important;
     padding-left: 25px !important;
     padding-right: 25px !important;
 }
 
 .btn:hover {
-    background-color: #32CD32 !important;
+    background-color: #2FAFC0 !important;
 }
 
 .un {
     text-decoration: underline;
-    text-decoration-color: #32CD32;
+    text-decoration-color: #2FAFC0;
 }
 
 .br {
@@ -67,7 +67,7 @@ nav {
 }
 
 .card {
-    background-color: #333 !important;
+    background-color: 	#2B2D42 !important;
 }
 
 .col {
@@ -90,7 +90,7 @@ nav {
 }
 
 .service-card a {
-    color: #32CD32;
+    color: #2FAFC0;
 }
 
 .service-card i {
@@ -101,12 +101,12 @@ nav {
 .service-card h6 {
     font-size: 18px;
     margin: 15px 0 10px;
-    color: #32CD32;
+    color: #2FAFC0;
 }
 
 .service-card h5 {
     margin: 15px 0 10px;
-    color: #32CD32;
+    color: #2FAFC0;
 }
 .service-card p {
     font-size: 14px;
@@ -115,7 +115,7 @@ nav {
 }
 
 .green-text1 {
-    color: #32CD32 !important;
+    color: #2FAFC0 !important;
 }
 
 .lico {
@@ -128,92 +128,22 @@ nav {
 }
 
 .sidenav a {
-    color: white !important; 
+    color: 	#F8F9FA !important; 
 }
 
 .btn-primary {
-    background-color: #32CD32 !important;
+    background-color: #2FAFC0 !important;
 }
 
 .btn-primary:hover {
     background-color: #222 !important;
-    border: 2px #32CD32 solid;
+    border: 2px #2FAFC0 solid;
+    color: 	#F8F9FA !important;
 }
 
 .btn-secondary:hover {
-    background-color: #32CD32;
+    background-color: #2FAFC0;
     border: 2px #222 solid;
-}
-
-/* Carousel wrapper */
-.infinite-carousel {
-    position: relative;
-    max-width: 900px;
-    margin: 2rem auto;      /* adjust vertical spacing via CSS, not <br> */
-    overflow: hidden;
-}
-
-  /* Track container hides overflow */
-.carousel-track-container {
-    overflow: hidden;
-}
-
-  /* Flex‑row of all items */
-.carousel-track {
-    display: flex;
-    transition: transform 0.5s ease;
-}
-
-  /* Individual cards */
-.carousel-item {
-    flex: 0 0 200px;       /* fixed width for smooth looping */
-    margin-right: 20px;
-    background: #333;
-    color: #fff;
-    border-radius: 8px;
-    padding: 1.5rem;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-  /* Buttons */
-.carousel-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: #31cb31;
-    border: none;
-    color: #fff;
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    cursor: pointer;
-    z-index: 10;
-}
-.carousel-button.prev { left: 10px; }
-.carousel-button.next { right: 10px; }
-
-  /* Lordicon cleanup */
-.lico {
-    will-change: transform;
-    backface-visibility: hidden;
-    overflow: hidden;
-    display: block;
-}
-
-  /* Stats text */
-.stats-number {
-    font-size: 1.25rem;
-    margin: 0.5rem 0 0.25rem;
-}
-.stats-label {
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    color: #fff;
 }
 
 .learn-more {
@@ -228,7 +158,7 @@ nav {
 } */
 
 .learn-more  i {
-    color: #31cb31 !important;
+    color: #2FAFC0 !important;
     padding-top: 10%;
 }
 

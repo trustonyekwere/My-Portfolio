@@ -69,7 +69,7 @@
                 <br><br><br><br>
                 <div class="row">
                     <div class="col s12 m7 l7">
-                        <h6 style="margin-bottom: -2%; color: #31cb31; font-size: 20px;">Hello,</h6>
+                        <h6 style="margin-bottom: -2%; color: #2FAFC0; font-size: 20px;">Hello,</h6>
                         <h3>I'm Tee</h3>
                         <p>
                             - A passionate and dedicated web developer and graphics designer, driven by the ever-evolving world of technology and its limitless possibilities.
@@ -89,7 +89,7 @@
                             delay="1500"
                             stroke="light"
                             state="in-reveal"
-                            colors="primary:#000000,secondary:#646e78,tertiary:#a66037,quaternary:#000000,quinary:#32cd32"
+                            colors="primary:#000000,secondary:#646e78,tertiary:#a66037,quaternary:#000000,quinary:#2FAFC0"
                             style="width:300px;height:300px">
                         </lord-icon>
                     </div>
@@ -176,7 +176,7 @@
                                     src="https://cdn.lordicon.com/lzgmgrnn.json"
                                     trigger="loop"
                                     delay="2000"
-                                    colors="primary:#31cb31"
+                                    colors="primary:#2FAFC0"
                                     style="width:65px;height:65px">
                                 </lord-icon>
                             </a>
@@ -195,7 +195,7 @@
                                 src="https://cdn.lordicon.com/exymduqj.json"
                                 trigger="loop"
                                 delay="2000"
-                                colors="primary:#32cd32,secondary:#32cd32"
+                                colors="primary:#2FAFC0,secondary:#2FAFC0"
                                 style="width:65px;height:65px">
                             </lord-icon>
                             </a>
@@ -214,7 +214,7 @@
                                 src="https://cdn.lordicon.com/wsaaegar.json"
                                 trigger="loop"
                                 delay="2000"
-                                colors="primary:#32cd32,secondary:#32cd32"
+                                colors="primary:#2FAFC0,secondary:#2FAFC0"
                                 style="width:65px;height:65px">
                             </lord-icon>
                             </a>
@@ -233,7 +233,7 @@
                                 src="https://cdn.lordicon.com/qfwgmyhc.json"
                                 trigger="loop"
                                 delay="2000"
-                                colors="primary:#32cd32,secondary:#32cd32"
+                                colors="primary:#2FAFC0,secondary:#2FAFC0"
                                 style="width:65px;height:65px">
                             </lord-icon>
                         </a>
@@ -252,7 +252,7 @@
                                 src="https://cdn.lordicon.com/fwkrbvja.json"
                                 trigger="loop"
                                 delay="2000"
-                                colors="primary:#31cb31,secondary:#31cb31"
+                                colors="primary:#2FAFC0,secondary:#2FAFC0"
                                 style="width:65px;height:65px">
                             </lord-icon>
                             </a>
@@ -271,7 +271,7 @@
                                 src="https://cdn.lordicon.com/fikcyfpp.json"
                                 trigger="loop"
                                 delay="2000"
-                                colors="primary:#31cb31,secondary:#31cb31"
+                                colors="primary:#2FAFC0,secondary:#2FAFC0"
                                 style="width:65px;height:65px">
                             </lord-icon>
                             </a>
@@ -305,11 +305,11 @@
                                 src="https://cdn.lordicon.com/jjxzcivr.json"
                                 trigger="loop"
                                 delay="2000"
-                                colors="primary:#32cd32,secondary:#32cd32"
+                                colors="primary:#2FAFC0,secondary:#2FAFC0"
                                 style="width:65px;height:65px">
                             </lord-icon>
                                 <h5>GitHub</h5>
-                                <p style="color: #fff;">
+                                <p style="color: #F8F9FA;">
                                     Browse my code, follow my latest work, and see how I build creative and functional solutions.
                                 </p><br>
                                 <span class="learn-more"><h6 style="font-size: 18px;">Explore my projects</h6><i class="fa fa-arrow-right" style="font-size: 16px;" aria-hidden="true"></i></span>
@@ -325,11 +325,11 @@
                                     src="https://cdn.lordicon.com/vpbspaec.json"
                                     trigger="loop"
                                     delay="2000"
-                                    colors="primary:#32cd32,secondary:#32cd32"
+                                    colors="primary:#2FAFC0,secondary:#2FAFC0"
                                     style="width:65px;height:65px">
                                 </lord-icon>
                                 <h5>Email</h5>
-                                <p style="color: #fff;">
+                                <p style="color: #F8F9FA;">
                                     Reach out for business inquiries, project discussions, or detailed service requests.
                                 </p><br>
                                 <span class="learn-more"><h6 style="font-size: 18px;">Let's collaborate</h6><i class="fa fa-arrow-right" style="font-size: 16px;" aria-hidden="true"></i></span>
@@ -345,11 +345,11 @@
                                     src="https://cdn.lordicon.com/dnphlhar.json"
                                     trigger="loop"
                                     delay="2000"
-                                    colors="primary:#32cd32,secondary:#32cd32"
+                                    colors="primary:#2FAFC0,secondary:#2FAFC0"
                                     style="width:65px;height:65px">
                                 </lord-icon>
                                 <h5>Whatsapp</h5>
-                                <p style="color: #fff;">
+                                <p style="color: #F8F9FA;">
                                     Quick, direct communication for quotes, ideas, or project updates—let’s get things started.
                                 </p><br>
                                 <span class="learn-more"><h6 style="font-size: 18px;">Chat with me</h6><i class="fa fa-arrow-right" style="font-size: 16px;" aria-hidden="true"></i></span>
@@ -385,53 +385,5 @@
         });
     </script>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-        document.querySelectorAll('.infinite-carousel').forEach((carousel) => {
-            const track = carousel.querySelector('.carousel-track');
-            const items = Array.from(track.children).filter(item => !item.classList.contains('clone'));
-            const style = getComputedStyle(items[0]);
-            const itemWidth = items[0].getBoundingClientRect().width + parseInt(style.marginRight);
-        
-            // Clone start and end for loop effect
-            items.forEach(item => {
-            const clone = item.cloneNode(true);
-            clone.classList.add('clone');
-            track.appendChild(clone);
-            });
-            [...items].reverse().forEach(item => {
-            const clone = item.cloneNode(true);
-            clone.classList.add('clone');
-            track.insertBefore(clone, track.firstChild);
-            });
-        
-            const totalItems = track.children.length;
-            let index = items.length;
-            let pos = -itemWidth * index;
-            track.style.transform = `translateX(${pos}px)`;
-        
-            function moveNext() {
-            index++;
-            pos = -itemWidth * index;
-            track.style.transition = 'transform 0.5s ease';
-            track.style.transform = `translateX(${pos}px)`;
-            }
-        
-            track.addEventListener('transitionend', () => {
-            if (index >= totalItems - items.length) {
-                track.style.transition = 'none';
-                index = items.length;
-                pos = -itemWidth * index;
-                track.style.transform = `translateX(${pos}px)`;
-            }
-            });
-        
-            // Auto-scroll every 3 seconds
-            setInterval(() => {
-            moveNext();
-            }, 3000);
-        });
-        });
-    </script>
 </body>
 </html>
