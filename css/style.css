@@ -165,3 +165,7 @@ nav {
 .straight {
     text-align: justify;
 }
+
+.start {
+    text-align: start !important;
+}
