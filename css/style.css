@@ -1,8 +1,13 @@
 * {
     margin: 0px;
     padding: 0px;
-    font-family: 'Allerta stencil', sans-serif;;
+    font-family: 'roboto', sans-serif;;
     scroll-behavior: smooth !important;
+}
+
+@font-face {
+    font-family: roboto;
+    src: url(/fonts/Roboto-VariableFont_wdth\,wght.ttf);
 }
 
 html {
