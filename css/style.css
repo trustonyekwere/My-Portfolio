@@ -116,22 +116,17 @@ nav {
     background-color: #1a1a1a;
     padding: 30px 20px;
     border-radius: 20px;
-    margin-bottom: 30px;
     height: 100%;
+    transition: all 0.3s ease;
+    margin: 0px 2px 16px 2px;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 20px #1bd497;
 }
 
 .service-card a {
-    color: #1bd497;
-}
-
-.service-card i {
-    font-size: 45px;
-    margin-bottom: 10px;
-}
-
-.service-card h6 {
-    font-size: 18px;
-    margin: 15px 0 10px;
     color: #1bd497;
 }
 
@@ -142,7 +137,6 @@ nav {
 .service-card p {
     font-size: 14px;
     line-height: 1.5;
-    text-align: start;
 }
 
 .green-text1 {
