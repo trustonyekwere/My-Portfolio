@@ -11,8 +11,8 @@
 }
 
 html {
-    background-color: #1A1A1A;
-    color: 	#F8F9FA !important;
+    background-color: #000000;
+    color: 	#FFF6CB !important;
     scroll-behavior: smooth !important;
     scroll-padding-top: 80px; /* match your data-bs-offset */
     overflow-x: hidden;
@@ -52,19 +52,19 @@ nav {
 .btn {
     text-transform: capitalize !important;
     background-color: #222 !important;
-    border: 2px #2FAFC0 solid !important;
+    border: 2px #1bd497 solid !important;
     border-radius: 18px !important;
     padding-left: 25px !important;
     padding-right: 25px !important;
 }
 
 .btn:hover {
-    background-color: #2FAFC0 !important;
+    background-color: #1bd497 !important;
 }
 
 .un {
     text-decoration: underline;
-    text-decoration-color: #2FAFC0;
+    text-decoration-color: #1bd497;
 }
 
 .br {
@@ -87,15 +87,15 @@ nav {
 
 /* Card styling to match screenshot */
 .service-card {
-    background-color: #2a2a2a;
+    background-color: #1a1a1a;
     padding: 30px 20px;
-    border-radius: 8px;
+    border-radius: 20px;
     margin-bottom: 30px;
     height: 100%;
 }
 
 .service-card a {
-    color: #2FAFC0;
+    color: #1bd497;
 }
 
 .service-card i {
@@ -106,12 +106,12 @@ nav {
 .service-card h6 {
     font-size: 18px;
     margin: 15px 0 10px;
-    color: #2FAFC0;
+    color: #1bd497;
 }
 
 .service-card h5 {
     margin: 15px 0 10px;
-    color: #2FAFC0;
+    color: #1bd497;
 }
 .service-card p {
     font-size: 14px;
@@ -120,7 +120,7 @@ nav {
 }
 
 .green-text1 {
-    color: #2FAFC0 !important;
+    color: #1bd497 !important;
 }
 
 .lico {
@@ -133,21 +133,22 @@ nav {
 }
 
 .sidenav a {
-    color: 	#F8F9FA !important; 
+    color: 	#FFF6CB !important; 
 }
 
 .btn-primary {
-    background-color: #2FAFC0 !important;
+    background-color: #1bd497 !important;
+    border-radius: 20px !important;
 }
 
 .btn-primary:hover {
     background-color: #222 !important;
-    border: 2px #2FAFC0 solid;
-    color: 	#F8F9FA !important;
+    border: 2px #1bd497 solid;
+    color: 	#FFF6CB !important;
 }
 
 .btn-secondary:hover {
-    background-color: #2FAFC0;
+    background-color: #1bd497 !important;
     border: 2px #222 solid;
 }
 
@@ -163,7 +164,7 @@ nav {
 } */
 
 .learn-more  i {
-    color: #2FAFC0 !important;
+    color: #1bd497 !important;
     padding-top: 10%;
 }
 
@@ -174,3 +175,76 @@ nav {
 .start {
     text-align: start !important;
 }
+
+
+/* cool typing effect */
+
+#typewriter-text.typing {
+    display: inline-block;
+    border-right: 2px solid #000; /* Blinking cursor */
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation:
+        typing 4s steps(60, end) forwards,
+        blink 0.7s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+
+/* skills circle chart */
+
+.skills {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  padding: 2rem;
+  background: #1a1a1a; /* or your bg */
+}
+
+.skill {
+  text-align: center;
+  color: #FFF6CB;
+}
+
+.circle {
+  --size: 120px;            /* circle diameter */
+  --thickness: 10px;        /* ring thickness */
+  --perc: 0;                /* animated value */
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  background:
+    conic-gradient(
+      #1bd497 calc(var(--perc) * 1%),
+      #333 0
+    );
+  display: grid;
+  place-items: center;
+  position: relative;
+  font-family: sans-serif;
+}
+
+.circle::before {
+  content: '';
+  width: calc(var(--size) - var(--thickness) * 2);
+  height: calc(var(--size) - var(--thickness) * 2);
+  background: #111; /* match container bg */
+  border-radius: 50%;
+  position: absolute;
+}
+
+.circle .perc {
+  position: relative;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
