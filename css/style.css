@@ -1,7 +1,7 @@
 * {
     margin: 0px;
     padding: 0px;
-    font-family: 'roboto', sans-serif;;
+    font-family: 'roboto', sans-serif;
     scroll-behavior: smooth !important;
 }
 
@@ -10,9 +10,34 @@
     src: url(/fonts/Roboto-VariableFont_wdth\,wght.ttf);
 }
 
+@font-face {
+    font-family: shame;
+    src: url(/fonts/ShameimaruSans.ttf);
+}
+
+@font-face {
+    font-family: nano;
+    src: url(/fonts/NanoTech\ Regular.otf);
+}
+
+.shame {
+    font-family: shame !important;
+}
+
+h3 {
+    font-family: shame;
+    text-align: start;
+}
+
+.und {
+    color: #1bd497;
+    text-decoration: underline;
+    text-decoration-color: #1bd497;
+}
+
 html {
     background-color: #000000;
-    color: 	#FFF6CB !important;
+    color: 	#fff !important;
     scroll-behavior: smooth !important;
     scroll-padding-top: 80px; /* match your data-bs-offset */
     overflow-x: hidden;
@@ -60,9 +85,10 @@ nav {
 
 .btn:hover {
     background-color: #1bd497 !important;
+    transition: 0.5s;
 }
 
-.un {
+.und {
     text-decoration: underline;
     text-decoration-color: #1bd497;
 }
@@ -133,7 +159,7 @@ nav {
 }
 
 .sidenav a {
-    color: 	#FFF6CB !important; 
+    color: 	#fff !important; 
 }
 
 .btn-primary {
@@ -141,10 +167,14 @@ nav {
     border-radius: 20px !important;
 }
 
+.btn-secondary {
+    border-radius: 20px !important;
+}
+
 .btn-primary:hover {
     background-color: #222 !important;
     border: 2px #1bd497 solid;
-    color: 	#FFF6CB !important;
+    color: 	#fff !important;
 }
 
 .btn-secondary:hover {
@@ -203,48 +233,48 @@ nav {
 /* skills circle chart */
 
 .skills {
-  display: flex;
-  gap: 2rem;
-  justify-content: center;
-  padding: 2rem;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    padding: 2rem;
   background: #1a1a1a; /* or your bg */
 }
 
 .skill {
-  text-align: center;
-  color: #FFF6CB;
+    text-align: center;
+    color: #fff;
 }
 
 .circle {
   --size: 120px;            /* circle diameter */
   --thickness: 10px;        /* ring thickness */
   --perc: 0;                /* animated value */
-  width: var(--size);
-  height: var(--size);
-  border-radius: 50%;
-  background:
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    background:
     conic-gradient(
-      #1bd497 calc(var(--perc) * 1%),
-      #333 0
+        #1bd497 calc(var(--perc) * 1%),
+        #333 0
     );
-  display: grid;
-  place-items: center;
-  position: relative;
-  font-family: sans-serif;
+    display: grid;
+    place-items: center;
+    position: relative;
+    font-family: sans-serif;
 }
 
 .circle::before {
-  content: '';
-  width: calc(var(--size) - var(--thickness) * 2);
-  height: calc(var(--size) - var(--thickness) * 2);
-  background: #111; /* match container bg */
-  border-radius: 50%;
-  position: absolute;
+    content: '';
+    width: calc(var(--size) - var(--thickness) * 2);
+    height: calc(var(--size) - var(--thickness) * 2);
+    background: #111; /* match container bg */
+    border-radius: 50%;
+    position: absolute;
 }
 
 .circle .perc {
-  position: relative;
-  font-size: 1.2rem;
-  font-weight: bold;
+    position: relative;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
