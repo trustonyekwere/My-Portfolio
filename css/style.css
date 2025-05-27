@@ -47,6 +47,10 @@ html {
     position: relative;
 }
 
+.responsive-img {
+    border-radius: 10px !important;
+}
+
 nav ul li a {
     position: relative;
     color: white;
@@ -324,3 +328,60 @@ nav {
     transform: translate(calc(-50% + 15px), -50%);
     z-index: -1;
 }
+
+
+/* image overlay */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Card container */
+.bg-card {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;       /* 16:9 aspect ratio; change to suit */
+    background-size: 100% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    overflow: hidden;          /* clips the zoom */
+    transition: background-size 0.5s ease;
+    cursor: pointer;
+}
+
+/* Dark overlay & text on hover */
+.bg-card .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg-card:hover .overlay {
+    opacity: 1;
+}
+
+/* Zoom background on hover, centered */
+.bg-card:hover {
+    background-size: 110% auto;  /* zoom in from center without stretching container */
+}
+
+/* Overlay content styling (same as before) */
+.overlay-content { text-align: center; color: #fff; }
+.overlay-content h3 { margin: 0 0 .5rem; font-size: 1.2rem; }
+.overlay-content .button {
+    padding: .4rem .8rem;
+    background: #3EDBF0;
+    color: #000;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
