@@ -15,10 +15,10 @@
     src: url(/fonts/ShameimaruSans.ttf);
 }
 
-@font-face {
+/* @font-face {
     font-family: nano;
     src: url(/fonts/NanoTech\ Regular.otf);
-}
+} */
 
 .shame {
     font-family: shame !important;
@@ -30,7 +30,7 @@ h3 {
 }
 
 .und {
-    color: #1bd497;
+    color: #fff;
     text-decoration: underline;
     text-decoration-color: #1bd497;
 }
@@ -39,12 +39,44 @@ html {
     background-color: #000000;
     color: 	#fff !important;
     scroll-behavior: smooth !important;
-    scroll-padding-top: 80px; /* match your data-bs-offset */
+    scroll-padding-top: 80px;
     overflow-x: hidden;
 }
 
 .scrollspy {
     position: relative;
+}
+
+nav ul li a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 16px;
+    font-family: shame;
+}
+
+nav ul li a:hover {
+    background-color: #222222 !important;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 14px;
+    bottom: 14px;
+    width: 0;
+    height: 2.5px;
+    background-color: #1bd497; 
+    transition: width 0.4s ease;
+}
+
+nav ul li a:hover::after {
+    width: 40%;
+}
+
+nav ul li a.active::after {
+    width: 40%;
 }
 
 body {
