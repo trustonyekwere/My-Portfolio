@@ -632,4 +632,6 @@ nav {
     transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
-
+.end {
+    text-align: end !important;
+}
