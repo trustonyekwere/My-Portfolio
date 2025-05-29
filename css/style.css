@@ -49,6 +49,7 @@ html {
 
 .responsive-img {
     border-radius: 10px !important;
+    width: 85% !important;
 }
 
 nav ul li a {
