@@ -6,7 +6,7 @@
     <title>Tee's Portfolio</title>
         
     <!-- favicon -->
-    <link rel="shortcut icon" href="img/my logo-F.png" type="image/x-icon">
+    <link rel="shortcut icon" href="img/my logo-favicon.png" type="image/x-icon">
 
     <!-- Flickity CSS -->
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css"/>
@@ -42,40 +42,51 @@
 
 <body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="80" tabindex="0">
 
-<div class="background">
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-</div>
+    <!-- Preloader -->
+    <div id="preloader">
+        <lord-icon
+            src="https://cdn.lordicon.com/wpequvda.json"
+            trigger="loop"
+            state="loop-transparency"
+            colors="primary:#1bd497"
+            style="width:70px;height:70px">
+        </lord-icon>
+    </div>
+
+    <div class="background">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
 
     <header>
         <div class="navbar-fixed">
             <nav class="z-depth-0">
                 <div class="container">
                     <div class="nav-wrapper">
-                        <a href="#!" class="brand-logo"><img style="width: 100px!important;" src="img/logo no bg.png" alt=""></a>
+                        <a href="#!" class="brand-logo"><img style="width: 40px !important; margin-top: 28% !important;" src="img/my logo-favicon.png" alt=""></a>
                         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                         <ul class="right hide-on-med-and-down">
                         <li><a href="#home">Home</a></li>
@@ -119,7 +130,7 @@
                             <b>My Works</b>
                         </a>
                     </div>
-                    <div class="col s12 m5 l5">
+                    <div class="col s12 m5 l5 center" style="margin-top: 30px;">
                         <lord-icon
                             src="https://cdn.lordicon.com/vmkushle.json"
                             trigger="loop"
@@ -552,7 +563,15 @@
                                 <p style="color: #FFF;  text-align: center !important;">
                                     Quick, direct communication for quotes, ideas, or project updates—let’s get things started.
                                 </p><br>
-                                <img src="img/click (1).gif" alt="" style="width: 45px;">
+                                <div class="end">
+                                    <lord-icon
+                                        src="https://cdn.lordicon.com/yhtmwrae.json"
+                                        trigger="loop"
+                                        delay="2000"
+                                        colors="primary:#1bd497"
+                                        style="width:30px;height:30px">
+                                    </lord-icon>
+                                </div>
                             </div>
                         </a>
                     </div>
@@ -586,6 +605,24 @@
             });
         });
     </script>
+
+    <script>
+        // Minimum display time in milliseconds
+        const MIN_DISPLAY = 4000;
+        const start = Date.now();
+
+        window.addEventListener('load', () => {
+            const pre = document.getElementById('preloader');
+            const elapsed = Date.now() - start;
+            const remain = Math.max(0, MIN_DISPLAY - elapsed);
+
+            setTimeout(() => {
+            pre.classList.add('fade-out');
+            setTimeout(() => pre.remove(), 600);
+            }, remain);
+        });
+    </script>
+
 
     
     <script>
