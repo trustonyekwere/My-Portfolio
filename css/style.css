@@ -52,6 +52,14 @@ html {
     width: 85% !important;
 }
 
+.mg-b {
+    margin-bottom: 10px !important;
+}
+
+.mg-mb {
+    margin-bottom: 0.5px !important;
+}
+
 nav ul li a {
     position: relative;
     color: white;
