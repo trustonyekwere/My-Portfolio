@@ -48,7 +48,7 @@ html {
 }
 
 .responsive-img {
-    border-radius: 10px !important;
+    border-radius: 20px !important;
     width: 85% !important;
 }
 
@@ -157,7 +157,6 @@ nav {
     margin-bottom: 0;
 }
 
-/* Card styling to match screenshot */
 .service-card {
     background-color: #1a1a1a;
     padding: 30px 20px;
@@ -182,7 +181,6 @@ nav {
 }
 .service-card p {
     font-size: 14px;
-    line-height: 1.5;
 }
 
 .green-text1 {
@@ -571,7 +569,9 @@ nav {
     box-shadow: -2vmin 0 0.781921368082186vmin currentColor;
 }
 
-
+.project-card {
+    border-radius: 20px !important;
+}
 
 /* image overlay */
 
