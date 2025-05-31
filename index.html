@@ -117,17 +117,17 @@
                 <div class="row">
                     <div class="col s12 m7 l7">
                         <h2>
-                            <b class="shame">Trust Onyekwere</b>
+                            <b class="shame">Trust Onyekwere.</b>
                         </h2>
-                        <p style="font-size: 16px;">
-                            A passionate and dedicated web developer and graphics designer, driven by the ever-evolving world of technology and its limitless possibilities.
+                        <p style="font-size: 17px;">
+                            I build clean, functional designs and user-first web experiences with a creative edge and a love for detail.
                         </p>
                         <br>
-                        <a href="#contact" class="waves-effect waves-dark btn-secondary btn">
+                        <a href="#contact" class="waves-effect waves-light btn-secondary btn">
                             <b>Let's talk</b>
                         </a>
                         <a href="#my_works" class="waves-effect waves-light btn-primary btn">
-                            <b>My Works</b>
+                            <b>My Work</b>
                         </a>
                     </div>
                     <div class="col s12 m5 l5 center" style="margin-top: 30px;">
@@ -159,13 +159,13 @@
                     <div class="col s12 m12 l6 start">
                         <div class="section-header">
                             <h5 class="text-2xl font-bold mb-4 text-center green-text1" style="text-align: start;">Fullstack Web Developer</h5>               
-                            <p class="straight">As a passionate web developer and graphics designer, I have always been fascinated by the intersection of design and technology, and I am thrilled to be able to bring my creative ideas to life. <br><br>                              
+                            <p>As a passionate web developer and graphics designer, I have always been fascinated by the intersection of design and technology, and I am thrilled to be able to bring my creative ideas to life. <br><br>                              
                             </p>
-                            <p class="straight">My primary focus is on web development, where I excel in crafting beautiful user interfaces that are both visually appealing and user-friendly. I am always exploring new tools, frameworks, and techniques to enhance my skills and deliver cutting-edge solutions to my clients.
+                            <p>My primary focus is on web development, where I excel in crafting beautiful user interfaces that are both visually appealing and user-friendly. I am always exploring new tools, frameworks, and techniques to enhance my skills and deliver cutting-edge solutions to my clients.
                             </p><br>
                         </div>
                         <a href="https://drive.google.com/file/d/1OcWCzWZc5MFMXBOKYtDTB_Fo0pyKRbih/view?usp=drive_link" target="_blank" class="waves-effect waves-light btn-primary btn">
-                            <b>Download Resume</b>
+                            <b>Download Résumé</b>
                         </a>
                     </div>
                 </div>
@@ -182,7 +182,7 @@
                         <h3 class="green-text1">My Works</h3><br>
                     </div>
                     
-                    <p class="straight">Here's some of the projects I've worked on that blend creativity with clean, functional code. Each one reflects a journey of learning, experimenting, and pushing boundaries.</p><br><br>
+                    <p style="text-align: left;">Here's some of the projects I've worked on that blend creativity with clean, functional code. Each one reflects a journey of learning, experimenting, and pushing boundaries.</p><br><br>
                 <div class="hide-on-large-only">
                     <div class="row mg-mb">
                         <div class="col s12 m6 l4">
@@ -642,9 +642,32 @@
         });
     </script>
 
+    <script>
+        const sections = document.querySelectorAll("section");
+        const navLinks = document.querySelectorAll("nav ul li a");
+
+        window.addEventListener("scroll", () => {
+            let current = "";
+
+            sections.forEach(section => {
+            const sectionTop = section.offsetTop - 100;
+            const sectionHeight = section.offsetHeight;
+            if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+                current = section.getAttribute("id");
+            }
+            });
+
+            navLinks.forEach(link => {
+            link.classList.remove("active");
+            if (link.getAttribute("href") === `#${current}`) {
+                link.classList.add("active");
+            }
+            });
+        });
+    </script>
 
     
-    <script>
+    <!-- <script>
         const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             const element = entry.target;
@@ -660,10 +683,10 @@
 
         const target = document.getElementById('typewriter-text');
         observer.observe(target);
-    </script>
+    </script> -->
 
 
-    <script>
+    <!-- <script>
         document.querySelectorAll('.circle').forEach(circle => {
             const target = +circle.dataset.perc;
             const span = circle.querySelector('.perc');
@@ -678,17 +701,7 @@
             };
             step();
         });
-    </script>
-
-    <script>
-        var cursor = document.querySelector('.blob');
-        
-        document.addEventListener('mousemove', function(e){
-            var x = e.clientX;
-            var y = e.clientY;
-            cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`
-        });
-    </script>
+    </script> -->
 
 
 </body>

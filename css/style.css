@@ -65,7 +65,8 @@ nav ul li a {
     color: white;
     text-decoration: none;
     transition: color 0.3s ease;
-    font-size: 14px;
+    font-size: 15px;
+    font-weight: 600;
     font-family: roboto;
 }
 
@@ -202,7 +203,8 @@ nav {
 }
 
 .btn-primary {
-    background-color: #1bd497 !important;
+    background-color: #22755a !important;
+    border: 2px #22755a solid !important;
     border-radius: 20px !important;
 }
 
@@ -212,13 +214,13 @@ nav {
 
 .btn-primary:hover {
     background-color: #222 !important;
-    border: 2px #1bd497 solid;
+    border: 2px #1bd497 solid !important;
     color: 	#fff !important;
 }
 
 .btn-secondary:hover {
-    background-color: #1bd497 !important;
-    border: 2px #222 solid;
+    background-color: #22755a !important;
+    border: 2px #22755a solid !important;
 }
 
 .learn-more {
@@ -235,10 +237,6 @@ nav {
 .learn-more  i {
     color: #1bd497 !important;
     padding-top: 10%;
-}
-
-.straight {
-    text-align: justify;
 }
 
 .start {
