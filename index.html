@@ -40,7 +40,7 @@
 
 </head>
 
-<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="80" tabindex="0">
+<body>
 
     <!-- Preloader -->
     <div id="preloader">
@@ -91,7 +91,7 @@
                         <ul class="right hide-on-med-and-down">
                         <li><a href="#home">Home</a></li>
                         <li><a href="#about">About</a></li>
-                        <li><a href="#my_works">My Works</a></li>
+                        <li><a href="#my_works">My Work</a></li>
                         <li><a href="#skills">Services</a></li>
                         <li><a href="#contact">Contact</a></li>
                         </ul>
@@ -103,7 +103,7 @@
         <ul class="sidenav" id="mobile-demo">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#my_works">My Works</a></li>
+            <li><a href="#my_works">My Work</a></li>
             <li><a href="#skills">Services</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>            
@@ -144,7 +144,7 @@
             </div>
         </section><br><br><br><br><br><br>
         
-        <section id="about" class="section scrollspy">
+        <section id="about" class="scrollspy">
             <div class="container center-align overflow-hidden">
                 <!-- Section Header -->
                 <div class="section-header">
@@ -174,7 +174,7 @@
         </section><br><br>
             
             
-        <section id="my_works" class="section scrollspy">
+        <section id="my_works" class="scrollspy">
             <div class="container center-align overflow-hidden">
                     <!-- Section Header -->
                     <div class="section-header">
@@ -343,7 +343,7 @@
         </section><br><br>
             
 
-        <section id="skills" class="section scrollspy">
+        <section id="skills" class="scrollspy">
             <div class="container center-align">
                 <!-- Section Header -->
                 <div class="section-header">
@@ -614,35 +614,12 @@
             M.Sidenav.init(sidenavElems);
 
             // Init scrollspy
-            var scrollspyElems = document.querySelectorAll('.scrollspy');
-            M.ScrollSpy.init(scrollspyElems, {
-            scrollOffset: 50
-            });
-
-            M.ScrollSpy.init(scrollspyElems, {
-            scrollOffset: 50 // tweak as needed
+            $(document).ready(function(){
+                $('.scrollspy').scrollSpy();
             });
         });
-    </script>
 
-    <script>
-        // Minimum display time in milliseconds
-        const MIN_DISPLAY = 2000;
-        const start = Date.now();
-
-        window.addEventListener('load', () => {
-            const pre = document.getElementById('preloader');
-            const elapsed = Date.now() - start;
-            const remain = Math.max(0, MIN_DISPLAY - elapsed);
-
-            setTimeout(() => {
-            pre.classList.add('fade-out');
-            setTimeout(() => pre.remove(), 600);
-            }, remain);
-        });
-    </script>
-
-    <script>
+        document.addEventListener("DOMContentLoaded", () => {
         const sections = document.querySelectorAll("section");
         const navLinks = document.querySelectorAll("nav ul li a");
 
@@ -664,7 +641,67 @@
             }
             });
         });
+
+        // Smooth scroll on nav link click
+        navLinks.forEach(link => {
+            link.addEventListener("click", e => {
+            e.preventDefault();
+            const targetId = link.getAttribute("href").slice(1);
+            const target = document.getElementById(targetId);
+            const offset = 80;
+
+            if (target) {
+                window.scrollTo({
+                top: target.offsetTop - offset,
+                behavior: "smooth"
+                });
+            }
+            });
+        });
+        });
+
     </script>
+
+    <script>
+        // Minimum display time in milliseconds
+        const MIN_DISPLAY = 2000;
+        const start = Date.now();
+
+        window.addEventListener('load', () => {
+            const pre = document.getElementById('preloader');
+            const elapsed = Date.now() - start;
+            const remain = Math.max(0, MIN_DISPLAY - elapsed);
+
+            setTimeout(() => {
+            pre.classList.add('fade-out');
+            setTimeout(() => pre.remove(), 600);
+            }, remain);
+        });
+    </script>
+
+    <!-- <script>
+        const sections = document.querySelectorAll("section");
+        const navLinks = document.querySelectorAll("nav ul li a");
+
+        window.addEventListener("scroll", () => {
+            let current = "";
+
+            sections.forEach(section => {
+            const sectionTop = section.offsetTop - 100;
+            const sectionHeight = section.offsetHeight;
+            if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+                current = section.getAttribute("id");
+            }
+            });
+
+            navLinks.forEach(link => {
+            link.classList.remove("active");
+            if (link.getAttribute("href") === `#${current}`) {
+                link.classList.add("active");
+            }
+            });
+        }); -->
+    <!-- </script> -->
 
     
     <!-- <script>

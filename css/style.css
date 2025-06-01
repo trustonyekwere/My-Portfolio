@@ -2,7 +2,7 @@
     margin: 0px;
     padding: 0px;
     font-family: 'roboto', sans-serif;
-    scroll-behavior: smooth !important;
+    scroll-behavior: smooth;
 }
 
 @font-face {
@@ -38,8 +38,7 @@ h3 {
 html {
     background-color: #000000;
     color: 	#fff !important;
-    scroll-behavior: smooth !important;
-    scroll-padding-top: 80px;
+    scroll-behavior: auto;
     overflow-x: hidden;
 }
 
@@ -110,10 +109,6 @@ body {
 .carousel-track-container {
     overflow: hidden;
     min-height: 160px; /* adjust as needed */
-}
-
-section {
-    scroll-margin-top: 80px; /* adjust to match your navbar height */
 }
 
 nav {
