@@ -201,8 +201,8 @@ nav {
 }
 
 .btn-primary {
-    background-color: #22755a !important;
-    border: 2px #22755a solid !important;
+    background-color: #20ad7e !important;
+    border: 2px #1bd497 solid !important;
     border-radius: 20px !important;
 }
 
@@ -217,8 +217,8 @@ nav {
 }
 
 .btn-secondary:hover {
-    background-color: #22755a !important;
-    border: 2px #22755a solid !important;
+    background-color: #20ad7e !important;
+    border: 2px #1bd497 solid !important;
 }
 
 .learn-more {
