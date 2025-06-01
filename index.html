@@ -610,8 +610,16 @@
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             // Init sidenav
-            var sidenavElems = document.querySelectorAll('.sidenav');
-            M.Sidenav.init(sidenavElems);
+            const sidenavElems = document.querySelectorAll('.sidenav');
+            const sidenavInstances = M.Sidenav.init(sidenavElems);
+
+            // Close sidenav on link click
+            document.querySelectorAll('.sidenav a').forEach(link => {
+                link.addEventListener('click', () => {
+                const sidenav = M.Sidenav.getInstance(document.querySelector('.sidenav'));
+                sidenav.close();
+                });
+            });
 
             // Init scrollspy
             $(document).ready(function(){
