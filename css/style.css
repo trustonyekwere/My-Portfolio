@@ -92,6 +92,11 @@ nav ul li a.active::after {
     width: 40%;
 }
 
+.sidenav-trigger i.fas.fa-bars {
+    color: #1bd497; /* your preferred color */
+    font-size: 28px;
+}
+
 body {
     overflow-x: hidden;
 }
