@@ -611,23 +611,41 @@
     <script src="js/materialize.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            // Init sidenav
-            const sidenavElems = document.querySelectorAll('.sidenav');
-            const sidenavInstances = M.Sidenav.init(sidenavElems);
+        // Init sidenav
+        const sidenavElems = document.querySelectorAll('.sidenav');
+        M.Sidenav.init(sidenavElems);
 
-            // Close sidenav on link click
-            document.querySelectorAll('.sidenav a').forEach(link => {
-                link.addEventListener('click', () => {
-                const sidenav = M.Sidenav.getInstance(document.querySelector('.sidenav'));
-                sidenav.close();
+        // Smooth‐scroll to section and then close sidenav
+        document.querySelectorAll('.sidenav a').forEach(link => {
+            link.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            // 1) Figure out target section ID (without the “#”)
+            const targetId = this.getAttribute('href').slice(1);
+            const targetEl = document.getElementById(targetId);
+            const offset = 80; // adjust if your header is a different height
+
+            // 2) If the section exists, scroll smoothly to it
+            if (targetEl) {
+                window.scrollTo({
+                top: targetEl.offsetTop - offset,
+                behavior: 'smooth'
                 });
+            }
+
+            // 3) Close the sidenav
+            const sidenavInstance = M.Sidenav.getInstance(
+                document.querySelector('.sidenav')
+            );
+            sidenavInstance.close();
             });
+        });
+        });
 
             // Init scrollspy
             $(document).ready(function(){
                 $('.scrollspy').scrollSpy();
             });
-        });
 
         const sections = document.querySelectorAll("section");
         const navLinks = document.querySelectorAll("nav ul li a");
