@@ -134,14 +134,13 @@
                             <b>My Work</b>
                         </a>
                     </div>
-<lord-icon
-    src="https://cdn.lordicon.com/kezeezyg.json"
-    trigger="morph"
-    stroke="light"
-    state="morph-open"
-    colors="primary:#1bd497,secondary:#1bd497"
-    style="width:250px;height:250px">
-</lord-icon>
+                    <lord-icon
+                        src="https://cdn.lordicon.com/kezeezyg.json"
+                        trigger="loop"
+                        stroke="light"
+                        colors="primary:#1bd497,secondary:#1bd497"
+                        style="width:250px;height:250px">
+                    </lord-icon>
                     </div>
                 </div>
             </div>
@@ -630,45 +629,76 @@
             });
         });
 
-        document.addEventListener("DOMContentLoaded", () => {
         const sections = document.querySelectorAll("section");
         const navLinks = document.querySelectorAll("nav ul li a");
 
-        window.addEventListener("scroll", () => {
-            let current = "";
+        // Function that checks scroll position (or hash) and updates .active
+        function updateActiveLink() {
+            // a) If there’s a hash in the URL (e.g. user reloaded on #services), honor that first:
+            const currentHash = window.location.hash; // “#about”, “”, etc.
+            if (currentHash) {
+            navLinks.forEach(link => {
+                // If this link’s href ends with the hash, make it active
+                if (link.getAttribute("href") === currentHash) {
+                link.classList.add("active");
+                } else {
+                link.classList.remove("active");
+                }
+            });
+            // Once we set based on hash, return early—no need to run scroll‐based logic.
+            return;
+            }
+
+            // b) Otherwise, run scroll‐based detection
+            let scrollPos = window.pageYOffset;
+            let currentSectionId = "";
 
             sections.forEach(section => {
-            const sectionTop = section.offsetTop - 100;
+            const sectionTop    = section.offsetTop - 100;
             const sectionHeight = section.offsetHeight;
-            if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
-                current = section.getAttribute("id");
+            if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+                currentSectionId = section.getAttribute("id");
             }
             });
 
+            // Remove .active from all links, then add to the one matching currentSectionId
             navLinks.forEach(link => {
             link.classList.remove("active");
-            if (link.getAttribute("href") === `#${current}`) {
+            if (link.getAttribute("href") === `#${currentSectionId}`) {
                 link.classList.add("active");
             }
             });
-        });
+        }
 
-        // Smooth scroll on nav link click
+        // 3) Call it once on load so the correct link is active immediately
+        updateActiveLink();
+
+        // 4) Also run updateActiveLink() whenever the user scrolls
+        window.addEventListener("scroll", updateActiveLink);
+
+        // ─────────────────────────────────────────────
+        // 5) Smooth‐scroll and update hash when clicking nav links
+        // ─────────────────────────────────────────────
         navLinks.forEach(link => {
             link.addEventListener("click", e => {
             e.preventDefault();
             const targetId = link.getAttribute("href").slice(1);
-            const target = document.getElementById(targetId);
-            const offset = 80;
+            const target   = document.getElementById(targetId);
+            const offset   = 80;
 
             if (target) {
+                // a) Scroll smoothly to that section
                 window.scrollTo({
                 top: target.offsetTop - offset,
                 behavior: "smooth"
                 });
+                // b) Update the URL hash without jumping instantly
+                history.pushState(null, "", `#${targetId}`);
+                // c) Immediately mark this link as active (optional, as scroll listener will also catch it)
+                navLinks.forEach(l => l.classList.remove("active"));
+                link.classList.add("active");
             }
             });
-        });
         });
 
     </script>
@@ -750,7 +780,6 @@
             step();
         });
     </script> -->
-
 
 </body>
 </html>
