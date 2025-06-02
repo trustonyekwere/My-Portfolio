@@ -610,76 +610,75 @@
     <script src="js/jqueryv3.4.1.js"></script>
     <script src="js/materialize.min.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-        // Init sidenav
-        const sidenavElems = document.querySelectorAll('.sidenav');
+        document.addEventListener("DOMContentLoaded", () => {
+        // ───────────────
+        // 1) Init Sidenav
+        // ───────────────
+        const sidenavElems = document.querySelectorAll(".sidenav");
         M.Sidenav.init(sidenavElems);
 
-        // Smooth‐scroll to section and then close sidenav
-        document.querySelectorAll('.sidenav a').forEach(link => {
-            link.addEventListener('click', function(e) {
+        // ────────────────────────────────────────────────────
+        // 2) Sidenav Links: Smooth‐scroll + Close the Drawer
+        // ────────────────────────────────────────────────────
+        const sidenavLinks = document.querySelectorAll(".sidenav a");
+        const offset = 80; // adjust if your fixed header has a different height
+
+        sidenavLinks.forEach(link => {
+            link.addEventListener("click", function(e) {
             e.preventDefault();
-
-            // 1) Figure out target section ID (without the “#”)
-            const targetId = this.getAttribute('href').slice(1);
+            const targetId = this.getAttribute("href").slice(1);
             const targetEl = document.getElementById(targetId);
-            const offset = 80; // adjust if your header is a different height
 
-            // 2) If the section exists, scroll smoothly to it
             if (targetEl) {
                 window.scrollTo({
                 top: targetEl.offsetTop - offset,
-                behavior: 'smooth'
+                behavior: "smooth"
                 });
             }
 
-            // 3) Close the sidenav
+            // Close the Materialize sidenav
             const sidenavInstance = M.Sidenav.getInstance(
-                document.querySelector('.sidenav')
+                document.querySelector(".sidenav")
             );
             sidenavInstance.close();
             });
         });
-        });
 
-            // Init scrollspy
-            $(document).ready(function(){
-                $('.scrollspy').scrollSpy();
-            });
-
+        // ────────────────────────────────────────────────────
+        // 3) Main Navbar: Scroll-spy + Smooth-scroll + Active State
+        // ────────────────────────────────────────────────────
         const sections = document.querySelectorAll("section");
-        const navLinks = document.querySelectorAll("nav ul li a");
+        const navLinks = document.querySelectorAll("nav ul li a"); // selects only your main‐navbar links
 
-        // Function that checks scroll position (or hash) and updates .active
+        // Function that sets .active on the correct <a>, based on hash or scroll position
         function updateActiveLink() {
-            // a) If there’s a hash in the URL (e.g. user reloaded on #services), honor that first:
-            const currentHash = window.location.hash; // “#about”, “”, etc.
+            // (a) If there’s a hash in the URL (e.g. “#about”), highlight that immediately:
+            const currentHash = window.location.hash;
+
             if (currentHash) {
             navLinks.forEach(link => {
-                // If this link’s href ends with the hash, make it active
                 if (link.getAttribute("href") === currentHash) {
                 link.classList.add("active");
                 } else {
                 link.classList.remove("active");
                 }
             });
-            // Once we set based on hash, return early—no need to run scroll‐based logic.
-            return;
+            return; // skip the scroll-based logic if a hash is present
             }
 
-            // b) Otherwise, run scroll‐based detection
-            let scrollPos = window.pageYOffset;
+            // (b) Otherwise, find which section is currently in view
+            const scrollPos = window.pageYOffset;
             let currentSectionId = "";
 
             sections.forEach(section => {
-            const sectionTop    = section.offsetTop - 100;
-            const sectionHeight = section.offsetHeight;
-            if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+            const sectionTop = section.offsetTop - offset - 20; 
+            // small extra “-20” so the underline switches a bit earlier if needed
+            const sectionBottom = sectionTop + section.offsetHeight;
+            if (scrollPos >= sectionTop && scrollPos < sectionBottom) {
                 currentSectionId = section.getAttribute("id");
             }
             });
 
-            // Remove .active from all links, then add to the one matching currentSectionId
             navLinks.forEach(link => {
             link.classList.remove("active");
             if (link.getAttribute("href") === `#${currentSectionId}`) {
@@ -688,37 +687,33 @@
             });
         }
 
-        // 3) Call it once on load so the correct link is active immediately
+        // Call once on load so the correct link is underlined immediately
         updateActiveLink();
 
-        // 4) Also run updateActiveLink() whenever the user scrolls
+        // Also call on scroll to update underline as the user scrolls
         window.addEventListener("scroll", updateActiveLink);
 
-        // ─────────────────────────────────────────────
-        // 5) Smooth‐scroll and update hash when clicking nav links
-        // ─────────────────────────────────────────────
+        // Smooth-scroll behavior for main navbar links
         navLinks.forEach(link => {
             link.addEventListener("click", e => {
             e.preventDefault();
             const targetId = link.getAttribute("href").slice(1);
-            const target   = document.getElementById(targetId);
-            const offset   = 80;
+            const targetEl = document.getElementById(targetId);
 
-            if (target) {
-                // a) Scroll smoothly to that section
+            if (targetEl) {
                 window.scrollTo({
-                top: target.offsetTop - offset,
+                top: targetEl.offsetTop - offset,
                 behavior: "smooth"
                 });
-                // b) Update the URL hash without jumping instantly
+                // Update the URL hash without a jump
                 history.pushState(null, "", `#${targetId}`);
-                // c) Immediately mark this link as active (optional, as scroll listener will also catch it)
+                // Immediately set this link as active
                 navLinks.forEach(l => l.classList.remove("active"));
                 link.classList.add("active");
             }
             });
         });
-
+        });
     </script>
 
     <script>
