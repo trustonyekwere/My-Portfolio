@@ -38,7 +38,7 @@ h3 {
 html {
     background-color: #000000;
     color: 	#fff !important;
-    scroll-behavior: auto;
+    scroll-behavior: smooth !important;
     overflow-x: hidden;
 }
 
@@ -79,7 +79,7 @@ nav ul li a::after {
     left: 14px;
     bottom: 14px;
     width: 0;
-    height: 2.7px;
+    height: 2.6px;
     background-color: #1bd497; 
     transition: width 0.3s ease;
 }
@@ -104,16 +104,6 @@ body {
 .img {
     width: 70%;
     height: 70%;
-}
-
-.carousel-wrapper {
-    max-width: 100vw;
-    overflow: hidden;
-}
-
-.carousel-track-container {
-    overflow: hidden;
-    min-height: 160px; /* adjust as needed */
 }
 
 nav {
@@ -185,12 +175,7 @@ nav {
 
 .green-text1 {
     color: #1bd497 !important;
-}
-
-.lico {
-    margin-left: 12% !important;
-    margin-top: 8% !important;
-}
+} 
 
 .sidenav {
     background-color: #222 !important;
